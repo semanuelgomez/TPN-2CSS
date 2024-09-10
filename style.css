@@ -1,0 +1,219 @@
+/* identificador {
+       propiedad : valor;
+}*/
+
+/* id para JS (#) y class para CSS(.)*/
+
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo de la página */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el blockquote en la cabecera */
+.cabecera blockquote {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-transform: capitalize; /* Transforma la primera letra de cada palabra en mayúscula */
+    line-height: 3rem;
+    text-decoration: none;
+    border-left: 0px;
+    padding-left: 0px;
+    margin: 0;
+    background-color: #474747;
+    padding: 20px; /* Añadido para mejorar el espaciado */
+}
+
+/* Estilos para las secciones */
+.propiedades-texto,
+.propiedades-caja,
+.posicion-relativa-absoluta,
+.seccion-grid,
+.seccion-animaciones  {
+    background-color: white; /* Fondo blanco para las cajas */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Espaciado externo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar las cajas */
+    border: 1px solid #ddd; /* Borde ligero para definición */
+}
+
+/* Estilos para el texto dentro de las secciones */
+.propiedades-texto p {
+    font-size: 16px;
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+/* Estilos para el blockquote en la sección de propiedades de texto */
+.propiedades-texto blockquote {
+    font-size: 12px;
+    font-style: italic;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    border-left: 5px solid #ccc;
+    padding-left: 10px;
+    margin: 20px 0;
+    background-color: #f0e6e6;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Estilos para el subrayado */
+.subrayado {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #000;
+    margin: 20px 0;
+}
+
+/* Estilos para las cajas */
+.caja-comun,
+.caja-destacada {
+    padding: 15px;
+    margin: 15px 0; /* Solo margen vertical */
+    border: 2px solid #000;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para la caja destacada */
+.caja-destacada {
+    background-color: #ffe6b8; /* Fondo diferente para destacar */
+    border: 2px solid #000;
+}
+
+
+/* Estilos para el contenedor relativo */
+.relativo {
+    position: relative; /* Posición relativa */
+    top: 10px; 
+    left: 10px; 
+    background-color: #dfefff; 
+    padding: 10px; 
+    margin-bottom: 50px; 
+    border: 1px solid #000; 
+    border-radius: 8px; 
+}
+
+/* Estilos para el contenedor absoluto */
+.absoluto {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    background-color: #088171; 
+    padding: 10px; 
+    border: 1px solid #000; 
+    border-radius: 8px; 
+    width: 750px; 
+    color:#dfefff /*letra*/
+}
+
+/* Media Query para pantallas con ancho máximo de 768px */
+@media (max-width: 768px) {
+    /* Cambiar el color de fondo del body */
+    body {
+        background-color: #f197ea; /* Cambia a un color de fondo más claro */
+    }
+
+    /* Reducir el tamaño de la fuente del encabezado */
+    h1 {
+        font-size: 24px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+
+    /* Ajustar el ancho y padding de las secciones para pantallas pequeñas */
+    .propiedades-texto,
+    .propiedades-caja,
+    .posicion-relativa-absoluta {
+        width: auto; 
+        padding: 10px; 
+        margin: 10px; 
+    }
+
+    /* Ajustar el estilo del contenedor relativo y absoluto */
+    .relativo {
+        padding: 15px; 
+        margin-bottom: 30px; 
+    }
+
+    .absoluto {
+        padding: 5px; 
+        width: auto; 
+    }
+
+    p, blockquote {
+        font-size: 14px; 
+    }
+
+    /* Ajustar el subrayado de los títulos */
+    .subrayado {
+        margin: 10px 0; 
+    }
+}
+
+
+/* Contenedor de Grid */
+.grid-container {
+    display: grid; /* Activar Grid */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px; /* Espacio entre elementos */
+    padding: 10px; /* Padding alrededor del contenedor */
+}
+
+/* Elementos de Grid */
+.grid-item {
+    color:#dfefff;
+    background-color: #5c51fa; 
+    padding: 20px; 
+    text-align: center; 
+    border: 1px solid #000; /* Borde para separar visualmente los elementos */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente para el texto */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de profundidad */
+}
+
+.animacion {
+    width: 150px;
+    height: 150px;
+    background-color: #fa0808; /* Color inicial */
+    margin: 20px auto; /* Centra el div horizontalmente */
+    border-radius: 8px;
+    display: flex; /* Flexbox para centrar contenido */
+    align-items: center; /* Alinear contenido verticalmente */
+    justify-content: center; /* Alinear contenido horizontalmente */
+    transition: background-color 0.5s ease; /* Transición de color */
+}
+
+/* Cambio de color al hacer hover */
+.animacion:hover {
+    background-color: #add8e6; /* Color de fondo al hacer hover */
+}
+
+/* Estilos para el div mover con animación de movimiento */
+.mover {
+    width: 150px;
+    height: 150px;
+    background-color: #006917; 
+    margin: 20px auto; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    animation: moverIzqADer 3s linear infinite; 
+}
+
+/* Definición de la animación con @keyframes */
+@keyframes moverIzqADer {
+    0% {
+        transform: translateX(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateX(100px); /* Mueve 100px a la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Vuelve a la posición inicial */
+    }
+}
